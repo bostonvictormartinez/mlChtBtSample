@@ -1,0 +1,53 @@
+{
+  "id": "39b2dec2-27fe-46aa-9d5c-9e135b16768d",
+  "parentId": "5757bd37-892b-4afa-a53e-1c3079a3c64b",
+  "rootParentId": "5757bd37-892b-4afa-a53e-1c3079a3c64b",
+  "name": "Submit Ticket - Email",
+  "auto": true,
+  "contexts": [
+    "SubmitTicket-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "SubmitTicket.SubmitTicket-custom",
+      "affectedContexts": [
+        {
+          "name": "SubmitTicket-custom-followup",
+          "parameters": {},
+          "lifespan": 2
+        },
+        {
+          "name": "SubmitTicket-Email-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2b78b06e-859d-4852-9b5e-54a93b7c4386",
+          "required": false,
+          "dataType": "@sys.email",
+          "name": "email",
+          "value": "$email",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Thanks for providing your email as $email! Please describe your issue."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1547086748,
+  "fallbackIntent": false,
+  "events": []
+}

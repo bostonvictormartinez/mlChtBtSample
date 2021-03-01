@@ -1,0 +1,49 @@
+{
+  "id": "9b413aef-dd97-4672-9c83-40d81438f44c",
+  "parentId": "39b2dec2-27fe-46aa-9d5c-9e135b16768d",
+  "rootParentId": "5757bd37-892b-4afa-a53e-1c3079a3c64b",
+  "name": "Submit Ticket - Issue Category",
+  "auto": true,
+  "contexts": [
+    "SubmitTicket-custom-followup",
+    "SubmitTicket-Email-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "SubmitTicket.SubmitTicket-custom.SubmitTicket-Name-custom",
+      "affectedContexts": [
+        {
+          "name": "SubmitTicket-IssueCategory-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "20170a0f-9b25-4521-b72b-59f24dd05f5f",
+          "required": false,
+          "dataType": "@category",
+          "name": "category",
+          "value": "$category",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1547086572,
+  "fallbackIntent": false,
+  "events": []
+}

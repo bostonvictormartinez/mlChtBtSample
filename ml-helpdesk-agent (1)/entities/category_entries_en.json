@@ -1,0 +1,46 @@
+[
+  {
+    "value": "Authentication",
+    "synonyms": [
+      "Authentication",
+      "Login",
+      "Access"
+    ]
+  },
+  {
+    "value": "Business",
+    "synonyms": [
+      "Business",
+      "Accounting",
+      "Purchase",
+      "Advice"
+    ]
+  },
+  {
+    "value": "Technical",
+    "synonyms": [
+      "Technical",
+      "Computer Issue",
+      "Computer",
+      "Software",
+      "not working",
+      "problem",
+      "isn\u0027t working"
+    ]
+  },
+  {
+    "value": "Performance",
+    "synonyms": [
+      "Performance",
+      "Slow Computer",
+      "Slow",
+      "Need Speed Up"
+    ]
+  },
+  {
+    "value": "Billing",
+    "synonyms": [
+      "Billing"
+    ]
+  }
+]

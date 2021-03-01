@@ -1,0 +1,140 @@
+[
+  {
+    "id": "b2f61966-dc3d-42a6-951d-34ccb5bb9c9e",
+    "data": [
+      {
+        "text": "I have a ",
+        "userDefined": false
+      },
+      {
+        "text": "problem",
+        "alias": "category",
+        "meta": "@category",
+        "userDefined": false
+      },
+      {
+        "text": " with my laptop",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540937843
+  },
+  {
+    "id": "9e1d2fde-1f21-4512-96a8-1405cdf74243",
+    "data": [
+      {
+        "text": "My printer ",
+        "userDefined": false
+      },
+      {
+        "text": "isn\u0027t working",
+        "alias": "category",
+        "meta": "@category",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540937843
+  },
+  {
+    "id": "f06aedc8-a3c0-4885-ae3e-273dda7aa5c8",
+    "data": [
+      {
+        "text": "My printer is ",
+        "userDefined": false
+      },
+      {
+        "text": "slow",
+        "alias": "category",
+        "meta": "@category",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540937741
+  },
+  {
+    "id": "9f39d8a4-b689-4541-ac1e-aac67cbfe863",
+    "data": [
+      {
+        "text": "I need a ",
+        "userDefined": false
+      },
+      {
+        "text": "software",
+        "alias": "category",
+        "meta": "@category",
+        "userDefined": false
+      },
+      {
+        "text": " license",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540937741
+  },
+  {
+    "id": "4d963056-fb41-4db0-a012-ca227192eef4",
+    "data": [
+      {
+        "text": "I have a ",
+        "userDefined": false
+      },
+      {
+        "text": "slow computer",
+        "alias": "category",
+        "meta": "@category",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540937741
+  },
+  {
+    "id": "0fd14143-83dc-496d-800f-fe2c9818f62c",
+    "data": [
+      {
+        "text": "This is an ",
+        "userDefined": false
+      },
+      {
+        "text": "Authentication",
+        "alias": "category",
+        "meta": "@category",
+        "userDefined": true
+      },
+      {
+        "text": " request",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540937741
+  },
+  {
+    "id": "41285b4b-7770-4d5e-9748-a4d96171d417",
+    "data": [
+      {
+        "text": "It falls under ",
+        "userDefined": false
+      },
+      {
+        "text": "Billing",
+        "alias": "category",
+        "meta": "@category",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540937741
+  }
+]

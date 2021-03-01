@@ -1,0 +1,256 @@
+OG MODEL for newagent-1-gaqdou
+
+table for csv Field name	Type	Mode	Policy tags 	Description
+ticketid	STRING	NULLABLE
+contactid	STRING	NULLABLE
+seniority	INTEGER	NULLABLE
+experience	STRING	NULLABLE
+category	STRING	NULLABLE
+type	STRING	NULLABLE
+impact	STRING	NULLABLE	
+priority	STRING	NULLABLE
+resolutiontime	INTEGER	NULLABLE
+
+Row	ticketid	contactid	seniority	experience	category	type	impact	      priority	resolutiontime
+1	t598       Laura Young       5       3-Advanced  Billing   Request   1-Minor         P3      1
+2	t784       Brian Marshall    5       4-Trainer   Authentication Issue 2-Normal     P3        1
+
+SELECT * FROM `helpdesk.issues` LIMIT 1000
+
+
+CREATE OR REPLACE MODEL `helpdesk.predict_eta_v0`
+OPTIONS(model_type='linear_reg') AS
+SELECT
+ category,
+ resolutiontime as label
+FROM
+  `helpdesk.issues`
+
+
+
+now run this to query the model we just created... it will tell us how likely model is to perform
+
+SELECT
+  *
+FROM
+  ML.EVALUATE(MODEL `helpdesk.predict_eta_v0`)
+
+  results are following
+
+  [
+  {
+    "mean_absolute_error": "2.1779780551307653",
+    "mean_squared_error": "8.901452205537002",
+    "mean_squared_log_error": "0.2049386261801674",
+    "median_absolute_error": "1.8381899074111185",
+    "r2_score": "0.15913358307217285",
+    "explained_variance": "0.15915392035925424"
+  }
+]
+
+
+above model says r2 and explained variance are close to zero. means algorithm is having problems distinguisings
+data from the noise...so now we add more data and create predict_eta
+
+CREATE OR REPLACE MODEL `helpdesk.predict_eta`
+OPTIONS(model_type='linear_reg') AS
+SELECT
+ seniority,
+ experience,
+ category,
+ type,
+ resolutiontime as label
+FROM
+  `helpdesk.issues`
+
+
+
+now run following query to update ml model we just update/created
+
+SELECT
+  *
+FROM
+  ML.EVALUATE(MODEL `helpdesk.predict_eta`)
+
+
+  this outputs following results in JSON
+
+
+[
+  {
+    "mean_absolute_error": "1.2288001637225827",
+    "mean_squared_error": "3.2796783748624923",
+    "mean_squared_log_error": "0.11364202873551399",
+    "median_absolute_error": "0.8900203075447495",
+    "r2_score": "0.7015848714446029",
+    "explained_variance": "0.7016261919020745"
+  }
+]
+
+NOW above it shows r2 and explained variance closer to 1 than before.
+
+then we execute a query to get a prediction of resolution time for this scenario
+WITH pred_table AS (
+    SELECT
+    5 as seniority,
+    '3-Advanced' as experience,
+    'Billing' as category,
+    'Request' as type
+)
+SELECT
+    *
+FROM
+    ML.PREDICT(MODEL `helpdesk.predict_eta`,
+    TABLE pred_table)
+
+
+
+[
+  {
+    "predicted_label": "3.6611295423685477",
+    "seniority": "5",
+    "experience": "3-Advanced",
+    "category": "Billing",
+    "type": "Request"
+  }
+]
+
+the results above show when seniority 5 , experience is 3, category is billing and type is Request,
+the model says the prediction for average response time is 3.6 days.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM `bhchelpdesk.customerservice` LIMIT 1000
+,,,,THIS TRIGGERS JOB THAT LOADS THE SOURCE DATA INTO QUERY TABLE,,,,
+
+
+CREATE OR REPLACE MODEL `bhchelpdesk.predict_eta_v0'
+OPTIONS(model_type='linear_reg') AS
+SELECT
+    category,
+    resolutiontime as label
+FROM
+    `bhchelpdesk.customerservice`
+
+.,,,,,,,THIS USES FIELDS CATEGORY AND RESLOHTION TIME TO BUILD ml MODEL THAT PREDICTS HOW LONG IT WILL TAKE. WE
+USE linear_regRESSION, AND TRAINED MODEL WILL BE NAMED predict_eta_v0 IN OUR HELP DESK DATASET
+,,,,,,,,,,
+
+
+
+
+SELECT
+    *
+FROM
+    ML.EVALUATE(MODEL `bhchelpdesk.predict_eta_v0`)
+
+,,,,,this runs the query to eval ML model we created  the r2 score and expalinced variance are close to 0...means algorith is having difficulty distinguising the signal in our data from noise...we need more fields duringtraining
+to see if imrovemnt serniority, esperience and type,,the model will be named predict eta
+
+this runs the query
+
+
+CREATE OR REPLACE MODEL `bhchelpdesk.predict_eta`
+OPTIONS(model_type='linear_reg') AS
+SELECT
+    seniority,
+    experience,
+    category,
+    type,
+    resolutiontime as label
+FROM
+    `bhchelpdesk.customerservice`
+
+
+....now run query to eval updated ML model
+
+
+SELECT
+    *
+FROM
+    ML.EVALUATE(MODEL `bhchelpdesk.predict_eta`)
+
+results
+
+
+  {
+    "mean_absolute_error": "1.2288001637225814",
+    "mean_squared_error": "3.279678374862512",
+    "mean_squared_log_error": "0.11364202873551348",
+    "median_absolute_error": "0.8900203075447495",
+    "r2_score": "0.7015848714446029",
+    "explained_variance": "0.7016261919020745"
+  }
+]
+
+this means the model has improved the metrics r2 wcore and explained variance are close to 1
+our model is catputing a strong linear realationship... and error metics are lower than berfore,
+
+now execute query to get a prediction of resolution TIME
+
+
+WITH pred_table AS (
+    SELECT
+    5 as seniority,
+    '3-Advanced' as experience,
+    'Billing' as category,
+    'Request' as type
+)
+SELECT
+    *
+FROM
+    ML.PREDICT(MODEL `bhchelpdesk.predict_eta`,
+    TABLE pred_table)
+
+
+when we run the above,,,the results follow
+
+Row				1
+predicted_label 3.6611295423685477
+seniority       5
+experience      3-Advanced
+category        Billing
+type            Request
+
+
+this says when seniority is 5, experience is 3-Advanced
+category is billing and type is request....that avg response TIME
+is 3.66 days

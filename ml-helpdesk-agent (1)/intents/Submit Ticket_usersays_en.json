@@ -1,0 +1,110 @@
+[
+  {
+    "id": "e1aaeb79-423e-413b-b973-57e9624358da",
+    "data": [
+      {
+        "text": "There is a virus on my computer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "f74d7570-73ee-4b5e-a637-da6faf515d8d",
+    "data": [
+      {
+        "text": "I have an access problem",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "1b9f728c-d964-4391-928e-5b6dd87e1696",
+    "data": [
+      {
+        "text": "There is a problem with my computer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "3f53e8f4-feb8-4647-bc97-25ba256cb13a",
+    "data": [
+      {
+        "text": "I have a problem",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "4229b846-c6df-400c-99c1-646294f2b850",
+    "data": [
+      {
+        "text": "I want to submit a ticket",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "68bb4d76-f8ce-40ac-ae22-a1d33b844d7a",
+    "data": [
+      {
+        "text": "issue",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "13edaa66-3659-44bf-8bb7-8a247e0c166a",
+    "data": [
+      {
+        "text": "problem",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "59715d8b-5dc4-4f0e-9c02-5d3dcd8b6ab3",
+    "data": [
+      {
+        "text": "submit ticket",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  },
+  {
+    "id": "e091ef8d-6df3-4a09-ad81-4053d0e141bd",
+    "data": [
+      {
+        "text": "ticket",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1540925051
+  }
+]

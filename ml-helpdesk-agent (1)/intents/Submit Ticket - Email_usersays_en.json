@@ -1,0 +1,152 @@
+[
+  {
+    "id": "f498408c-3521-47ac-9ab8-859e0ec1c1fb",
+    "data": [
+      {
+        "text": "here\u0027s my email: ",
+        "userDefined": false
+      },
+      {
+        "text": "john@johnsmith.com",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547085034
+  },
+  {
+    "id": "daa37af4-b5ed-41f8-aa19-360eb68e308b",
+    "data": [
+      {
+        "text": "it\u0027s ",
+        "userDefined": false
+      },
+      {
+        "text": "yiwo@company.it",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  },
+  {
+    "id": "3ad4442f-7f45-4534-9926-c73deca34e3c",
+    "data": [
+      {
+        "text": "angasesegh@help.org",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  },
+  {
+    "id": "47e0518d-105f-4b73-965a-fb551a807baf",
+    "data": [
+      {
+        "text": "were@us.gov",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  },
+  {
+    "id": "9f5b0870-ffa8-4696-9b50-a17210d037c5",
+    "data": [
+      {
+        "text": "oowl@go.com",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      },
+      {
+        "text": " is my email",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  },
+  {
+    "id": "79e6f92c-3577-41c2-9a3b-f7f40485db74",
+    "data": [
+      {
+        "text": "it is ",
+        "userDefined": false
+      },
+      {
+        "text": "kanghes@live.com",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  },
+  {
+    "id": "f0d3a677-d10d-45dd-b446-3d2787414194",
+    "data": [
+      {
+        "text": "email is ",
+        "userDefined": false
+      },
+      {
+        "text": "creat2@yahoo.com",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  },
+  {
+    "id": "907ca109-d83c-4baa-b2b5-37ec9af9b84e",
+    "data": [
+      {
+        "text": "xyzz.ss@google.com",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  },
+  {
+    "id": "579b4745-1216-4122-989f-c97605a7dc82",
+    "data": [
+      {
+        "text": "My email is ",
+        "userDefined": false
+      },
+      {
+        "text": "abc@gmail.com",
+        "alias": "email",
+        "meta": "@sys.email",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1547084850
+  }
+]
